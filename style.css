@@ -1,0 +1,56 @@
+/* Contenedor principal */
+.custom-select-wrapper {
+  position: relative;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Caja que siempre está visible */
+.select-styled {
+  background-color: #f0f0f0;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Lista de opciones (oculta por defecto) */
+.select-options {
+  display: none; /* Se activará con JavaScript */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 5px 0 0 0;
+  padding: 0;
+  list-style: none;
+  z-index: 10;
+}
+
+/* Estilo general y tamaño para móviles */
+.select-options li {
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Dando color individual a cada li */
+.option-color-1 { color: #d9534f; font-weight: bold; } /* Rojo */
+.option-color-2 { color: #0275d8; font-weight: bold; } /* Azul */
+.option-color-3 { color: #5cb85c; font-weight: bold; } /* Verde */
+
+/* Efecto hover/pulsación al tocar en Android */
+.select-options li:active {
+  background-color: #e2e2e2;
+}
+
+/* Clase para mostrar la lista */
+.select-options.show {
+  display: block;
+}
